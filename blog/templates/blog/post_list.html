@@ -44,6 +44,8 @@
               <a href="#" class="text-info">{{ post.user }}</a>
             </div>
           </div>
+          {% empty %}
+            <i class="text-info">No post uploaded.</i>
           {% endfor %}
 
 
