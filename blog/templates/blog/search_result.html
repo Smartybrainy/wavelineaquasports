@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <title>{% block title %}/ blog{% endblock title %}</title>
+  
+  {% include 'blog_navbar.html' %}
+  <!-- Masthead-->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-subheading">Welcome To Wavelineaqusports</div>
+      <!-- <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+      <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="/">Service</a> -->
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8">
+         {% for post in queryset %}
+        <div class="card mb-4">
+          {% if post.image %}
+          <a href="{{ post.get_absolute_url }}">
+            <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
+          </a>
+          {% endif %}
+          <div class="card-body">
+            <h4 class="card-title">{{ post.title }}</h4>
+            <p class="card-text">{{ post.content|safe|slice:":250" }}...</p>
+              <a href="{{ post.get_absolute_url }}" class="btn btn-secondary">Read More &rarr;</a>
+            </div>
+            {% empty %}
+            <div class="card">
+                <div class="card-body">
+                    <p>Sorry your search parameter did match any of our content</p>
+                    <p><i>Please try searching again.</i></p>
+                    <h1>
+                        <a href="{% url 'blog:post-list' %}" class="bs-arror-links">&larr;</a>
+                    </h1>
+                </div>
+            </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Wavelineaquasports {% block title %}{% endblock title %}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'fav/favicon.ico' %}" />
+
+        <!-- Font Awesome icons (free version)-->
+        <link href="{% static 'offline/font-awesome/all.min.css' %}">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+            type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet"
+            type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'packages/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'my_style/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'my_style/blog.css' %}" rel="stylesheet" />
+        <style>
+        .alert{
+            width: calc(760px / 2);
+            max-width: 520px;
+            word-break: keep-all;
+            -ms-word-break: keep-all;
+            z-index: 10000;
+            /* displays above all */
+            margin: auto;
+            margin-top: 3rem;
+            text-align: center;
+        }
+    </style>
+    </head>
+
+    <body id="page-top">
+
+    {% include 'fragments/scroll_bar.html' %}
+
+    <div class="container">
+        {% if messages %}
+        <div class="bs-alert-height">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible text-capitalize" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{ message|escape }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+        
+        {% block content %}
+        {% endblock content %}
+
+        <a href="https://wa.link/23mdvn"><img src="{% static 'fav/whatsapp.png' %}" class="bs-whatsapp-chat" alt="cha-img"></a>
+
+    </body>
+
+    {% include 'scripts.html' %}
+
+    {% block extra_scripts %}
+    {% endblock extra_scripts %}
+</html>

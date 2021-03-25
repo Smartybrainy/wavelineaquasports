@@ -1,0 +1,52 @@
+#bs-logo-shape {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50px !important;
+}
+
+/* For the carousel */
+.bs-carousel-img-height {
+  height: 65vh;
+}
+
+/* For the porfolio image */
+.bs-portfolio-img-height {
+  height: 33.33vh !important;
+  width: 100%;
+  background-size: cover !important;
+}
+
+/* For the scroll bar */
+#bs-progress-container {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #ccc;
+  z-index: 1000 !important;
+}
+#bs-progress-bar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #fff;
+  z-index: 1000 !important;
+}
+
+.bs-arror-links:hover {
+  text-decoration: none;
+}
+
+/* for whatsapp */
+.bs-whatsapp-chat{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

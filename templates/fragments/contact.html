@@ -1,0 +1,54 @@
+<!-- Contact-->
+<section class="page-section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Contact Us</h2>
+      <h3 class="section-subheading text-muted">
+        For more information.
+      </h3>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6 text-light">
+            <i class="fas fa-phone-volume"></i> Tel 08132 398 390 
+            <br>
+            <i class="fas fa-envelope-open-text"></i> wavelineaquasports@gmail.com
+        </div>
+
+        <div class="col-md-6 text-light">
+            <i class="fas fa-address-card"></i> Address. 1 Akinyemi Avenue off Oriwu Street Elf bus stop, lekki expressway, lagos
+        </div>
+    </div>
+
+    <form id="bsContactForm" method="POST" data-url="{% url 'sport:home' %}">
+      {% csrf_token %}
+      <div class="row align-items-stretch mb-4">
+        <div class="col-md-6">
+          <div class="form-group">
+            {{ contact_form.name }}
+          </div>
+          <div class="form-group">
+            {{ contact_form.email }}
+          </div>
+          <div class="form-group mb-md-0">
+            {{ contact_form.phone }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group form-group-textarea mb-md-0">
+            {{ contact_form.message }}
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <!-- for the success message -->
+        <div id="bs-success-container"></div>
+
+        <button
+          class="btn btn-secondary btn-xl text-uppercase"
+          type="submit" id="sendEnquiryBtn">Send a Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,76 @@
+{% load static %}
+<style>
+  .navbar-default {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+  .navbar-color {
+    background-color: #1e90ff !important;
+  }
+</style>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-default fixed-top" id="mainNav" style="margin-top: 5px;">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="/">
+      <img
+        src="{% static 'packages/assets/img/logos/logo.jpg' %}"
+        id="bs-logo-shape"
+        alt="logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler navbar-toggler-right bg-secondary"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      Menu
+      <i class="fas fa-bars ml-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog:post-list' %}">Blog</a>
+        </li>
+         <li class="nav-item"><a class="nav-link" href="{% url 'gallery:gallery-list' %}">Gallery</a>
+                </li>
+        <!--For registration -->
+        {% if not user.is_authenticated %}
+        <div class="d-flex">
+          <a href="{% url 'accounts:login' %}" class="btn btn-secondary btn-sm float-right mr-2" style="font-size: 14px">
+          <span data-toggle="modal" data-target="#exampleModalLogin">
+            Login
+          </span>
+        </a> 
+        <a href="{% url 'accounts:signup' %}" class="btn btn-secondary btn-sm float-right" style="font-size: 14px">
+          <span data-toggle="modal" data-target="#exampleModalSignup">
+            Signup
+          </span>
+        </a>
+        </div>
+        {% else %}
+        <a href="{% url 'accounts:logout' %}" class="btn btn-secondary btn-sm float-right" style="font-size: 14px">
+            Logout
+        </a>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

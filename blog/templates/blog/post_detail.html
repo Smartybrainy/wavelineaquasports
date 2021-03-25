@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <title>{% block title %}/ blog{% endblock title %}</title>
+  
+  {% include 'blog_navbar.html' %}
+  <!-- Masthead-->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-subheading">Welcome To Wavelineaqusports</div>
+      <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+      <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="/">Service</a>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <h1 class="my-4"><a href="{% url 'blog:post-list' %}" class="bs-arror-links">&larr;</a></h1>
+        
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title text-info">{{ object.title }}</h5>
+            <p class="card-text">{{ object.content | safe  }}</p>
+            {% if object.image %}
+              <img class="card-img-top" src="{{ object.image.url }}" alt="Card image cap">
+            {% endif %}
+          </div>
+
+
+            <!-- For likes button -->
+            <form action="{% url 'blog:post-likes' object.pk %}" method="POST" class="like-form" id="{{ object.id }}">
+              {% csrf_token %}
+              <input type="hidden" name="like_id" value="{{ object.pk }}">
+              {% if user.is_authenticated %}
+                <button class="badge badge-info ml-4 mb-2 likes-btn{{ object.id }}">
+                  {% if not user in object.liked.all %}
+                  Like
+                  {% else %}
+                  Unlike
+                  {% endif %}
+                </button>
+              {% else %}
+                <a href="{% url 'accounts:login' %}" class="badge badge-info ml-4 mb-2" onclick="alert('Login First')">Like</a>
+              {% endif %}
+              <span class="likes-count{{ object.id }}">{{ object.num_likes }} likes</span>
+            </form>
+
+            <div class="card-footer text-muted" style="font-style: italic;">
+              Posted on {{ object.date_created }} by
+              <a href="#" class="text-info">{{ object.user }}</a>
+            </div>
+          </div>
+
+          <!-- For the comment -->
+          <div class="card">
+            <div class="card-body">
+              {% for comment in object.my_comments.all %}
+                <h6 class="text-muted"><i>{{ comment.author }}</i></h6>
+                <p>{{ comment.content }}</p>
+                <hr>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <form action="{% url 'blog:post-detail' object.slug %}" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Comment...</label>
+                  {{ comment_form.content }}
+                </div>
+                 <div class="mb-3">
+                  <label  class="form-label">Author...</label>
+                  {{ comment_form.author }}
+                </div>
+                <button type="submit" class="btn btn-info">Post</button>
+              </form>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+  <script src="{% static 'public_scripts/post_likes.js' %}"></script>
+
+  <script>
+    $('document').ready(function()
+      {
+          $('textarea').each(function(){
+                  $(this).val($(this).val().trim());
+              }
+          );
+      });
+  </script>
+{% endblock extra_scripts %}

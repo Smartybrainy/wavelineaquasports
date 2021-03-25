@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <title>{% block title %}/ login{% endblock title %}</title>
+
+
+{% include 'navbar.html' %}
+<!-- <div class="view overlay h-100">
+    <div class="embed-responsive embed-responsive-16by9 rounded-top">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pFN2n7CRqhw?autoplay=1&muted=1" allowfullscreen
+        ></iframe>
+    </div>
+</div> -->
+
+<!-- Login modal -->
+<div
+class="modal fade" id="exampleModalLogin"
+tabindex="-1" role="dialog"
+aria-labelledby="exampleModalLabel" aria-hidden="true"
+>
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <section>
+                <h5 class="card-header text-center bg-light my-5">
+            <strong>Login</strong>
+        </h5>
+        
+        <div class="card-body">
+            <form class="text-center" method="POST" style="color: #757575">
+                {% csrf_token %}
+
+                {% if form.errors %}
+                    {% for error in form.non_field_errors  %}
+                        <p class="text-danger">{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
+                
+                {% for field in form %}
+                    <div class="md-form">
+                        {{ field }}
+                    </div>
+                {% endfor %}
+              <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect" type="submit">Login</button>
+              <hr />
+              <p><a href="{% url 'accounts:password-reset' %}" target="_self" class="text-info">Forgot password</a></p>
+            </form>
+        </div>
+        </section>
+    </div>
+</div>
+  </div>
+</div>
+<!-- End login modal -->
+{% endblock content %}
+
+{% block extra_scripts %}
+    <script src="{% static 'public_scripts/login_modal_loader.js' %}"></script>
+{% endblock extra_scripts %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <title>{% block title %}/ signup{% endblock title %}</title>
+
+<style>
+  .errorlist{
+    color: #ff0000;
+  }
+</style>
+
+{% include 'navbar.html' %}
+<!-- <div class="view overlay h-100">
+    <div class="embed-responsive embed-responsive-16by9 rounded-top">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pFN2n7CRqhw?autoplay=1&muted=1" allowfullscreen
+        ></iframe>
+    </div>
+</div> -->
+
+
+<!-- The signup modal -->
+<div
+  class="modal fade" id="exampleModalSignup"
+  tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <section>
+          <h5 class="card-header text-center bg-light my-5">
+            <strong>Signup</strong>
+          </h5>
+
+          <!--Card content-->
+          <div class="card-body">
+            <form class="text-center" method="POST" style="color: #757575">
+              {% csrf_token %}
+
+                {% if form.errors %}
+                  {% for key, value in form.errors.items %}
+                    {{ value }}
+                  {% endfor %}
+                {% endif %}
+
+              <div class="md-form">
+                {{ form.full_name }}
+              </div>
+
+              <div class="md-form mt-4">
+                {{ form.email }}
+              </div>
+
+              <div class="form-row mt-4">
+                <div class="col">
+                  <div class="md-form">
+                    {{ form.country_code }}
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="md-form">
+                    {{ form.phone_number }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row mt-4">
+                <div class="col">
+                  <div class="md-form">
+                    {{ form.password1 }}
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="md-form">
+                    {{ form.password2 }}
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect" type="submit">Signup</button>
+              <hr />
+              <p>
+                By clicking <em>Sign up</em> you agree to our
+                <a href="#" target="_self">terms of service</a>
+              </p>
+            </form>
+            <!-- Form -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End signup modal -->
+{% endblock content %}
+
+{% block extra_scripts %}
+    <script src="{% static 'public_scripts/signup_modal_loader.js' %}"></script>
+{% endblock extra_scripts %}
