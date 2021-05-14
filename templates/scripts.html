@@ -31,16 +31,14 @@
 <script src="{% static 'packages/js/scripts.js' %}"></script>
 
 <!-- For about date getter -->
-<script>
+<script type="text/javascript">
   var date = new Date()
   var today = date.getFullYear()
-  var output = document.getElementById('bs-getCurrentDate').innerHTML = today;
-  
+  document.querySelector('.bs-getFooterCurrentDate').innerHTML = today;
 </script>
 
-  
-  <!-- animations initialization -->
-  <script>
-        new WOW().init();
-  </script>
+<!-- animations initialization -->
+<script>
+      new WOW().init();
+</script>
 

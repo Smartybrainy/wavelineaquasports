@@ -6,7 +6,11 @@
 
 /* For the carousel */
 .bs-carousel-img-height {
-  height: 65vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover !important;
+  height: 55vh;
 }
 
 /* For the porfolio image */
@@ -46,7 +50,14 @@
   bottom: 1rem;
   right: 1rem;
   background-color: transparent;
-  height: 40px;
-  width: 40px;
+  display: inline-block;
+  /* height: 10vh; */
+  width: 10vw;
   border-radius: 50%;
+}
+
+@media all and (min-width: 760px){
+  .bs-whatsapp-chat{
+    width: 6vw;
+  }
 }

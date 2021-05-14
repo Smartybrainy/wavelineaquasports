@@ -1,153 +1,15 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load static %} 
+
+{% block content %}
 <title>{% block title %}{% endblock title %}</title>
 
 {% include 'navbar.html' %}
 
 <header>{% include 'fragments/carousel_header.html' %}</header>
 
-<h2 class="text-center text-success mt-5"><i>Swim like A Pro With Comfort Services</i></h2>
-
 {% include 'fragments/services.html' %}
 
-<!-- Portfolio Grid-->
-<section class="page-section bg-light" id="portfolio">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Content</h2>
-      <h3 class="section-subheading text-muted">Swimming Mede Easy</h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 mb-4 shadow">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img
-              class="img-fluid bs-portfolio-img-height"
-              src="{% static 'packages/assets/img/portfolio/01-thumbnail.jpg' %}"
-              alt=""
-            />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading text-muted">Let's swim</div>
-            <div class="portfolio-caption-subheading text-muted">
-              We love you
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 shadow">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img
-              class="img-fluid bs-portfolio-img-height"
-              src="{% static 'packages/assets/img/portfolio/02-thumbnail.jpg' %}"
-              alt=""
-            />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading text-muted">Let's swim</div>
-            <div class="portfolio-caption-subheading text-muted">
-              We love you
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 shadow">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img
-              class="img-fluid bs-portfolio-img-height"
-              src="{% static 'packages/assets/img/portfolio/03-thumbnail.jpg' %}"
-              alt=""
-            />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading text-muted">Let's swim</div>
-            <div class="portfolio-caption-subheading text-muted">We love you</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 shadow">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img
-              class="img-fluid bs-portfolio-img-height"
-              src="{% static 'packages/assets/img/portfolio/04-thumbnail.jpg' %}"
-              alt=""
-            />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading text-muted">Let's swim</div>
-            <div class="portfolio-caption-subheading text-muted">We love you</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0 shadow">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img
-              class="img-fluid bs-portfolio-img-height"
-              src="{% static 'packages/assets/img/portfolio/05-thumbnail.jpg' %}"
-              alt=""
-            />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading text-muted">Let's swim</div>
-            <div class="portfolio-caption-subheading text-muted">
-              We love you
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 shadow">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img
-              class="img-fluid bs-portfolio-img-height"
-              src="{% static 'packages/assets/img/portfolio/06-thumbnail.jpg' %}"
-              alt=""
-            />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading text-muted">Let's swim</div>
-            <div class="portfolio-caption-subheading text-muted">
-              We love you
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include 'fragments/testimony.html' %}
 
 <!-- About-->
 <section class="page-section" id="about">
@@ -171,15 +33,15 @@
         <div class="timeline-panel">
           <div class="timeline-heading">
             <!-- new date from script -->
-            <h4>2018-<div id="bs-getCurrentDate"></div></h4>
-            <h4 class="subheading">Our Humble Beginnings</h4>
+            <h4>2017-<span class="bs-getCurrentDate"></span></h4>
+            <h4 class="subheading">Our Humble Beginning</h4>
           </div>
           <div class="timeline-body">
-            <small class="text-muted">
+            <p class="text-muted">
               Wave-line Aqua Sports is a Standard Swimming School in Nigeria. For four years, Wave-line Aqua Sports has been developing an industry-leading methods of Swimming teaching that's derived from America and Australia curricula
               <br>
               It's a system that has helped hundreds of swimmers to improve their efficiency, confidence and speed in the pool.
-            </small>
+            </p>
           </div>
         </div>
       </li>
@@ -197,9 +59,9 @@
             <h4 class="subheading">from Waveline</h4>
           </div>
           <div class="timeline-body">
-            <small class="text-muted">
+            <p class="text-muted">
               Wave-line Aqua Sports gives you a proven straightforward approach to swimming, whether you are learning to swim freestyle, breaststroke, backstroke,  butterfly and others, be you a beginner, an intermediate or an advance swimmer looking to improve your technique, efficiency or speed.
-            </small>
+            </p>
           </div>
         </div>
       </li>
@@ -217,11 +79,11 @@
             <h4 class="subheading">You Success</h4>
           </div>
           <div class="timeline-body">
-            <small class="text-muted">
+            <p class="text-muted">
               Many people find swimming complicated and end up believing they will never achieve their goals. But Wave-line Aqua Sports approach is different - it’s logical, method based on hundred  of practical hours on the pool deck working with swimmers just like you. It's real-world effective swimming coaching. 
               <br>
               Start your journey towards better swimming with Wave-line Aqua Sports now.
-            </small>
+            </p>
           </div>
         </div>
       </li>
@@ -371,332 +233,15 @@
 
 {% include 'fragments/contact.html' %}
 
-<!-- Portfolio Modals-->
-<!-- Modal 1-->
-<div
-  class="portfolio-modal modal fade"
-  id="portfolioModal1"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <img
-          src="{% static 'packages/assets/img/close-icon.svg' %}"
-          alt="Close modal"
-        />
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="modal-body">
-              <!-- Project Details Go Here-->
-              <h4 class="text-uppercase text-center">Wavelineaquasports</h4>
-              <p class="item-intro text-muted">
-               Wave-line Aqua Sports swim school  (W.A.S.S.S).
-              </p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{% static 'packages/assets/img/portfolio/01-full.jpg' %}"
-                alt=""
-              />
-              <p>
-                Wave-line Aqua Sports swim school is the main hub of our swimming program, where learners are transformed from beginners to proficient swimmers. Certification is issued upon completion of each level. A standard three months academic term is adhered to.
-              </p>
-              <ul class="list-inline">
-                <!-- <li>Date: <span id="bs-modalDate"></span></li> -->
-                <!-- <li>Client: Threads</li>
-                <li>Category: Illustration</li> -->
-              </ul>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times mr-1"></i>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal 2-->
-<div
-  class="portfolio-modal modal fade"
-  id="portfolioModal2"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <img
-          src="{% static 'packages/assets/img/close-icon.svg' %}"
-          alt="Close modal"
-        />
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="modal-body">
-              <!-- Wavelineaquasportsils Go Here-->
-              <h4 class="text-uppercase text-center">Wavelineaquasports</h4>
-              <p class="item-intro text-muted">
-                Wave-line Aqua Sports swim school  (W.A.S.S.S).
-              </p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{% static 'packages/assets/img/portfolio/02-full.jpg' %}"
-                alt=""
-              />
-              <p>
-                Wave-line Aqua Sports swim school is the main hub of our swimming program, where learners are transformed from beginners to proficient swimmers. Certification is issued upon completion of each level. A standard three months academic term is adhered to.
-              </p>
-              <ul class="list-inline">
-                <!-- <li>Date: <span id="bs-modalDate"></span></li> -->
-                <!-- <li>Client: Explore</li>
-                <li>Category: Graphic Design</li> -->
-              </ul>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times mr-1"></i>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal 3-->
-<div
-  class="portfolio-modal modal fade"
-  id="portfolioModal3"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <img
-          src="{% static 'packages/assets/img/close-icon.svg' %}"
-          alt="Close modal"
-        />
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="modal-body">
-              <!-- Wavelineaquasportsils Go Here-->
-              <h4 class="text-uppercase text-center">Wavelineaquasports</h4>
-              <p class="item-intro text-muted">
-                Wave-line Aqua Sports swim school  (W.A.S.S.S).
-              </p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{% static 'packages/assets/img/portfolio/03-full.jpg' %}"
-                alt=""
-              />
-              <p>
-                Wave-line Aqua Sports swim school is the main hub of our swimming program, where learners are transformed from beginners to proficient swimmers. Certification is issued upon completion of each level. A standard three months academic term is adhered to.
-              </p>
-              <ul class="list-inline">
-                <!-- <li>Date: <span id="bs-modalDate"></span></li> -->
-                <!-- <li>Client: Finish</li>
-                <li>Category: Identity</li>
-              </ul> -->
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times mr-1"></i>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal 4-->
-<div
-  class="portfolio-modal modal fade"
-  id="portfolioModal4"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <img
-          src="{% static 'packages/assets/img/close-icon.svg' %}"
-          alt="Close modal"
-        />
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="modal-body">
-              <!-- Wavelineaquasportsils Go Here-->
-              <h4 class="text-uppercase text-center">Wavelineaquasports</h4>
-              <p class="item-intro text-muted">
-                Wave-line Aqua Sports swim school  (W.A.S.S.S).
-              </p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{% static 'packages/assets/img/portfolio/04-full.jpg' %}"
-                alt=""
-              />
-              <p>
-                Wave-line Aqua Sports swim school is the main hub of our swimming program, where learners are transformed from beginners to proficient swimmers. Certification is issued upon completion of each level. A standard three months academic term is adhered to.
-              </p>
-              <ul class="list-inline">
-                <!-- <li>Date: <span id="bs-modalDate"></span></li> -->
-                <!-- <li>Client: Lines</li>
-                <li>Category: Branding</li>
-              </ul> -->
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times mr-1"></i>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal 5-->
-<div
-  class="portfolio-modal modal fade"
-  id="portfolioModal5"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <img
-          src="{% static 'packages/assets/img/close-icon.svg' %}"
-          alt="Close modal"
-        />
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="modal-body">
-              <!-- Wavelineaquasportsils Go Here-->
-              <h4 class="text-uppercase text-center">Wavelineaquasports</h4>
-              <p class="item-intro text-muted">
-                Wave-line Aqua Sports swim school  (W.A.S.S.S).
-              </p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{% static 'packages/assets/img/portfolio/05-full.jpg' %}"
-                alt=""
-              />
-              <p>
-                Wave-line Aqua Sports swim school is the main hub of our swimming program, where learners are transformed from beginners to proficient swimmers. Certification is issued upon completion of each level. A standard three months academic term is adhered to.
-              </p>
-              <ul class="list-inline">
-                <!-- <li>Date: <span id="bs-modalDate"></span></li> -->
-                <!-- <li>Client: Southwest</li>
-                <li>Category: Website Design</li> -->
-              </ul>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times mr-1"></i>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal 6-->
-<div
-  class="portfolio-modal modal fade"
-  id="portfolioModal6"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <img
-          src="{% static 'packages/assets/img/close-icon.svg' %}"
-          alt="Close modal"
-        />
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="modal-body">
-              <!-- Project Details Go Here-->
-              <h4 class="text-uppercase text-center">Wavelineaquasports</h4>
-              <p class="item-intro text-muted">
-                Wave-line Aqua Sports swim school  (W.A.S.S.S).
-              </p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{% static 'packages/assets/img/portfolio/06-full.jpg' %}"
-                alt=""
-              />
-              <p>
-                Wave-line Aqua Sports swim school is the main hub of our swimming program, where learners are transformed from beginners to proficient swimmers. Certification is issued upon completion of each level. A standard three months academic term is adhered to.
-              </p>
-              <ul class="list-inline">
-                <!-- <li>Date: <span id="bs-modalDate"></span></li> -->
-                <!-- <li>Client: Window</li>
-                <li>Category: Photography</li> -->
-              </ul>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times mr-1"></i>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End of modal -->
-
 {% include 'fragments/site_map.html' %}
 
 {% include 'footer.html' %}
-{% endblock content %}
 
+<script>
+  const myDate = new Date();
+  document.querySelector('.bs-getCurrentDate').innerHTML = myDate.getFullYear();
+</script>
+{% endblock content %}
 
 {% block extra_scripts %}
   <script src="{% static 'public_scripts/contact_enquiry.js' %}"></script>
