@@ -1,7 +1,11 @@
 #bs-logo-shape {
-  min-width: 50px;
-  min-height: 50px;
-  border-radius: 50px !important;
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 50px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* For the carousel */
@@ -36,7 +40,7 @@
   left: 0;
   width: 0;
   height: 5px;
-  background-color: #fff;
+  background-color:#283593;
   z-index: 1000 !important;
 }
 
@@ -54,6 +58,27 @@
   /* height: 10vh; */
   width: 10vw;
   border-radius: 50%;
+}
+
+
+/* For index header */
+.bs-index-header{
+  background: linear-gradient(#fff, #283593);
+  padding: 50px 15px;
+  text-align: center;
+  color: #fff;
+}
+.bs-index-header h1, p, a{
+  padding: 30px 0;
+}
+.bs-index-header a{
+  font-size: larger;
+  transition: 250ms;
+}
+.bs-index-header a.btn:hover{
+  transform: scale(1.5);
+  background: #fff;
+  color: #283593;
 }
 
 @media all and (min-width: 760px){

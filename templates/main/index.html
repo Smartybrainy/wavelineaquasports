@@ -5,231 +5,22 @@
 
 {% include 'navbar.html' %}
 
-<header>{% include 'fragments/carousel_header.html' %}</header>
+<header class="pt-5 bs-index-header">
+  {% include 'fragments/carousel_header.html' %}
+
+  <h1>Welcome to Wave-line Aqua Sports</h1>
+  <p>We are so delighted to see that you have taken the first step in learning to swim. This brings us great joy!!!</p>
+  <a href="https://forms.gle/EgHWYeSX7iqsunJ77" target="_blank" class="btn btn-primary btn text-uppercase">sign up for swim class</a>
+</header>
 
 {% include 'fragments/services.html' %}
 
+{% include 'fragments/classes.html' %}
+
 {% include 'fragments/testimony.html' %}
 
-<!-- About-->
-<section class="page-section" id="about">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">About Us</h2>
-      <h3 class="section-subheading text-muted">
-          Wave-line Aqua Sports 
-      </h3>
-    </div>
-    <ul class="timeline">
-      <li>
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="{% static 'packages/assets/img/about/1.jpg' %}"
-            alt=""
-            style="width: 100%;height:auto"
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <!-- new date from script -->
-            <h4>2017-<span class="bs-getCurrentDate"></span></h4>
-            <h4 class="subheading">Our Humble Beginning</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Wave-line Aqua Sports is a Standard Swimming School in Nigeria. For four years, Wave-line Aqua Sports has been developing an industry-leading methods of Swimming teaching that's derived from America and Australia curricula
-              <br>
-              It's a system that has helped hundreds of swimmers to improve their efficiency, confidence and speed in the pool.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted">
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="{% static 'packages/assets/img/about/1.jpg' %}"
-            alt=""
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4>Values</h4>
-            <h4 class="subheading">from Waveline</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Wave-line Aqua Sports gives you a proven straightforward approach to swimming, whether you are learning to swim freestyle, breaststroke, backstroke,  butterfly and others, be you a beginner, an intermediate or an advance swimmer looking to improve your technique, efficiency or speed.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="{% static 'packages/assets/img/about/1.jpg' %}"
-            alt=""
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4>We wish</h4>
-            <h4 class="subheading">You Success</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Many people find swimming complicated and end up believing they will never achieve their goals. But Wave-line Aqua Sports approach is different - it’s logical, method based on hundred  of practical hours on the pool deck working with swimmers just like you. It's real-world effective swimming coaching. 
-              <br>
-              Start your journey towards better swimming with Wave-line Aqua Sports now.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted">
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="{% static 'packages/assets/img/about/4.jpg' %}"
-            alt=""
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4>More</h4>
-            <h4 class="subheading">From Waveline</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Stay connected to out blog page
-              <br>
-              view it <a href="{% url 'blog:post-list' %}">here</a>
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted">
-        <div class="timeline-image">
-          <h4 style="cursor: pointer;" onclick="alert('Send us a message using the contact form below &darr;')">
-            Be Part
-            <br />
-            Of Our
-            <br />
-            Story!
-          </h4>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
 <!-- Team-->
-<section class="page-section bg-light" id="team">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-      <h3 class="section-subheading text-muted">
-        Get in tauch with our team.
-      </h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="{% static 'packages/assets/img/team/1.jpg' %}"
-            alt=""
-          />
-          <h4>Emmanuel Ogunbanjo</h4>
-          <p class="text-muted">Swimming & Aqua Aerobic Coach</p>
-          <!-- star rating -->
-          <p class="text-warning">
-             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </p>
-          <a class="btn btn-dark btn-social mx-1" href="https://www.instagram.com/wavelineaquasports/" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/wavelineaquasports/" target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!" onclick="alert('click facebook or instagram')"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="{% static 'packages/assets/img/team/2.jpg' %}"
-            alt=""
-          />
-          <h4>Elvis Ovuakporaye. A</h4>
-          <p class="text-muted">Founder</p>
-          <!-- star rating -->
-          <p class="text-warning">
-             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </p>
-          <!-- end start rating -->
-          <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/wavelineaquasports/" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/wavelineaquasports/" target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!" onclick="alert('click facebook or instagram')"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="{% static 'packages/assets/img/team/3.jpg' %}"
-            alt=""
-          />
-          <h4>Peter Ebu Oko</h4>
-          <p class="text-muted">Swimming Coach ( Partner & Senior Coach)</p>
-          <!-- star rating -->
-          <p class="text-warning">
-             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </p>
-          <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/wavelineaquasports/" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/wavelineaquasports/" target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!" onclick="alert('click facebook or instagram')"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <p class="large text-muted">
-          Founder
-          Elvis has swim lesson university (USA) certification with over 6years of teaching and coaching swimmers of all ages and ability. 
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include 'fragments/team.html' %}
 
 {% include 'fragments/contact.html' %}
 
@@ -242,8 +33,3 @@
   document.querySelector('.bs-getCurrentDate').innerHTML = myDate.getFullYear();
 </script>
 {% endblock content %}
-
-{% block extra_scripts %}
-  <script src="{% static 'public_scripts/contact_enquiry.js' %}"></script>
-{% endblock extra_scripts %}
-

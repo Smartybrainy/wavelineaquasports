@@ -1,42 +1,55 @@
+{% load static %}
+
 <div class="bs-testimony-hero">
 
     <div class="container-fluid px-2 px-md-4 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-lg-9 col-xl-8">
                 <div class="card card-main border-0 text-center">
-                    <h5 class="font-weight-bold mb-4">What our clients are saying<br>about us.</h5>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <h5 class="font-weight-bold mb-4" style="color: #283593;">What our clients are saying<br>about us.</h5>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         </ol>
                         <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <div class="card border-0 card-0">
-                                    <div class="card profile py-3 px-4">
-                                        <div class="text-center"> <img src="https://i.imgur.com/gazoShk.jpg" class="img-fluid profile-pic"> </div>
-                                        <h6 class="mb-0 mt-2">Marielle Haag</h6> <small>Backend Developer</small>
-                                    </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
-                                    <p class="content mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
-                                </div>
-                            </div>
                             <div class="carousel-item active">
                                 <div class="card border-0 card-0">
                                     <div class="card profile py-3 px-4">
-                                        <div class="text-center"> <img src="https://i.imgur.com/oW8Wpwi.jpg" class="img-fluid profile-pic"> </div>
-                                        <h6 class="mb-0 mt-2">Ximena Vegara</h6> <small>UI/UX Designer</small>
+                                        <div class="text-center"> <img src="{% static 'other_images/testimony-1.jpg' %}" class="img-fluid profile-pic"> </div>
+                                        <h6 class="mb-0 mt-2">Mrs Jemimah <br> Babasola</h6>
                                     </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
-                                    <p class="content mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
+                                    <p class="content mb-0">
+                                        I have been putting off my Swimming lessons until I came in contact with wave-line. Teaching approach is very friendly and patient. My lessons is till ongoing and will continue because I am enjoying every class. 
+                                        <br>
+                                        Thanks to Coach Elvis. 
+                                    </p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="card border-0 card-0">
+                                    <div class="card profile py-3 px-4">
+                                        <div class="text-center"> <img src="{% static 'other_images/testimony-2.jpg' %}" class="img-fluid profile-pic"> </div>
+                                        <h6 class="mb-0 mt-2">Mr. Olumuyiwa <br> Olaley</h6>
+                                    </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
+                                    <p class="content mb-0">At Wave-line Aqua Sports, there is no age barrier for learning how to swim. 
+
+                                    Swimming process is simplified and made easy to understand, which makes progress comes naturally. 
+
+                                    I recommend Wave-line to everyone, for exercise fun, excellence and safety purposes.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="card border-0 card-0">
                                     <div class="card profile py-3 px-4">
-                                        <div class="text-center"> <img src="https://i.imgur.com/ndQx2Rg.jpg" class="img-fluid profile-pic"> </div>
-                                        <h6 class="mb-0 mt-2">John Paul</h6> <small>UI/UX Designer</small>
+                                        <div class="text-center"> <img src="{% static 'other_images/testimony-3.jpg' %}" class="img-fluid profile-pic"> </div>
+                                        <h6 class="mb-0 mt-2">Cookel George</h6>
                                     </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png" width="20" height="20">
-                                    <p class="content mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
+                                    <p class="content mb-0">The lessons are very much in line with the standards of swimming . Wave-line Aqua Sports is a professional arena to learn the art of swimming.
+
+                                    Consequently , I have no doubt in my mind that other applicants will get a good run for their money! Can't wait to spread the word for others to join the coaching class.</p> <img class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png" width="20" height="20">
                                 </div>
                             </div>
                         </div>

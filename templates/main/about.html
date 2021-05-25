@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<title>{% block title %}/ about{% endblock title %}</title>
+
+{% include 'blog_navbar.html' %}
+
+<section class="mt-5" style="background: #283593;">
+    <div class="container bg-light bs-about-container">
+        <h1 class="section-heading text-uppercase">About Us</h1>
+        <p>Thank you for visiting us at Wave-line Aqua Sports , the ultimate in swimming tuition and coaching of children and adult in Lagos, Nigeria.
+​       </p>
+        <p>
+            Wave-line Aqua Sports is a Standard Swimming School in Nigeria. For four years, Wave-line Aqua Sports has been developing an industry-leading methods of Swimming teaching that's derived from America and Australia curricula
+            <br>
+            It's a system that has helped hundreds of swimmers to improve their efficiency, confidence and speed in the pool.
+        </p>
+        <p>
+            Wave-line Aqua Sports gives you a proven straightforward approach to swimming, whether you are learning to swim freestyle, breaststroke, backstroke,  butterfly and others, be you a beginner, an intermediate or an advance swimmer looking to improve your technique, efficiency or speed.
+        </p>
+        <p>
+            Many people find swimming complicated and end up believing they will never achieve their goals. But Wave-line Aqua Sports approach is different - it’s logical, method based on hundred  of practical hours on the pool deck working with swimmers just like you. It's real-world effective swimming coaching. 
+            <br>
+            Start your journey towards better swimming with Wave-line Aqua Sports now.
+            <br><br> 
+            Teaching people to swim is our passion, whatever you age, swimming is a lot of FUN, keeps you FIT and could save your LIFE.
+        </p>
+    </div>
+</section>
+<div class="bs-about-full-width-img">
+    <img src="{% static 'other_images/about-2.jpg' %}" alt="">
+</div>
+
+ <div class="container bg-light bs-about-container">
+    <h1 class="section-heading text-uppercase">OUR MISSION</h1>
+    <p>
+        Our Mission is to provide world class swimminglessons and swimming pool services to Nigerians delivered professionally for personal development and business advancement
+​       </p>
+</div>
+<div class="bs-about-full-width-img">
+    <img src="{% static 'other_images/about-3.jpg' %}" alt="">
+</div>
+
+ <div class="container bg-light bs-about-container">
+    <h1 class="section-heading text-uppercase">OUR VISION</h1>
+    <p>
+       Our Vision is to produce world class swimmers and also make swimming a life time sport and hobby for both recreational purposes and as a way of managing stress.
+​     </p>
+    <h1 class="section-heading text-uppercase">SAFETY AND TRUST</h1>
+    <p>
+       Each Wave-line Aqua Sports is an assemblage of dedicated, experienced and Certified Coaches who are experts in their respective fields.
+​     </p>
+</div>
+
+{% include 'fragments/contact.html' %}
+
+{% include 'fragments/site_map.html' %}
+
+{% include 'footer.html' %}
+{% endblock content %}
+
+{% block extra_scripts %}
+  <script src="{% static 'public_scripts/contact_enquiry.js' %}"></script>
+{% endblock extra_scripts %}

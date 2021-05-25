@@ -7,10 +7,10 @@
   {% include 'blog_navbar.html' %}
   <!-- Masthead-->
   <header class="masthead">
-    <div class="container">
+    <div class="container text-center" style="color: #283593;">
       <div class="masthead-subheading">Welcome To Wavelineaqusports</div>
       <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-      <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="/">Service</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/">Service</a>
     </div>
   </header>
   
@@ -22,8 +22,8 @@
         
         <!-- Blog Post -->
         <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title text-info">{{ object.title }}</h5>
+          <div class="card-body" style="color: #283593;">
+            <h5 class="card-title">{{ object.title }}</h5>
             <p class="card-text">{{ object.content | safe  }}</p>
             {% if object.image %}
               <img class="card-img-top" src="{{ object.image.url }}" alt="Card image cap">
@@ -36,7 +36,7 @@
               {% csrf_token %}
               <input type="hidden" name="like_id" value="{{ object.pk }}">
               {% if user.is_authenticated %}
-                <button class="badge badge-info ml-4 mb-2 likes-btn{{ object.id }}">
+                <button class="badge badge-info ml-4 mb-2 likes-btn{{ object.id }}" style="color: #283593;">
                   {% if not user in object.liked.all %}
                   Like
                   {% else %}
@@ -57,9 +57,9 @@
 
           <!-- For the comment -->
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" style="color: #283593;">
               {% for comment in object.my_comments.all %}
-                <h6 class="text-muted"><i>{{ comment.author }}</i></h6>
+                <h6><i>{{ comment.author }}</i></h6>
                 <p>{{ comment.content }}</p>
                 <hr>
               {% endfor %}
@@ -67,7 +67,7 @@
           </div>
 
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" style="color: #283593;">
               <form action="{% url 'blog:post-detail' object.slug %}" method="POST">
                 {% csrf_token %}
                 <div class="mb-3">
@@ -78,7 +78,7 @@
                   <label  class="form-label">Author...</label>
                   {{ comment_form.author }}
                 </div>
-                <button type="submit" class="btn btn-info">Post</button>
+                <button type="submit" class="btn btn-primary">Post</button>
               </form>
             </div>
           </div>
@@ -98,7 +98,7 @@
     $('document').ready(function()
       {
           $('textarea').each(function(){
-                  $(this).val($(this).val().trim());
+                  $(this).val().trim();
               }
           );
       });

@@ -60,10 +60,10 @@ window.onscroll = function(){
 }
 
 function controlNav(){
-    if(document.body.scrollTop >= 40 || document.documentElement.scrollTop >= 40){
-        navbarDefault.classList.add('navbar-color')
+    if(document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30){
+        navbarDefault.classList.add('navbar-pad')
     }else{
-        navbarDefault.classList.remove('navbar-color')
+        navbarDefault.classList.remove('navbar-pad')
     }
 }
 
