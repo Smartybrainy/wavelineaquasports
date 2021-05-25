@@ -33,3 +33,7 @@
   document.querySelector('.bs-getCurrentDate').innerHTML = myDate.getFullYear();
 </script>
 {% endblock content %}
+
+{% block extra_scripts %}
+  <script src="{% static 'public_scripts/contact_enquiry.js' %}"></script>
+{% endblock extra_scripts %}
